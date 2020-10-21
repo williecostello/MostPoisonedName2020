@@ -30,7 +30,7 @@ if len(selected_names) != 0:
     st.plotly_chart(fig)
 
 '''
-Visualizations based on data made available by the [U.S. Social Security Administration](https://catalog.data.gov/dataset/baby-names-from-social-security-card-applications-national-level-data)
+This app is based on data made available by the [U.S. Social Security Administration](https://catalog.data.gov/dataset/baby-names-from-social-security-card-applications-national-level-data)
 
-To see the full code and accompanying statistical analyses, see our [Github repo]()
+To see the full code and statistical analyses behind this, check out the [Github repo](https://github.com/williecostello/MostPoisonedName2020)
 '''
