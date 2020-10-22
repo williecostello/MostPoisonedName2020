@@ -15,10 +15,10 @@ s3_client = boto3.client('s3')
 
 @st.cache(allow_output_mutation=True)
 def load_data(file_name):
-    s3_client.download_file('mostpoisonedname2020', file_name, 'data.csv')
+    if not os.path.exists('data.csv'):
+        s3_client.download_file('mostpoisonedname2020', file_name, 'data.csv')
     df = pd.read_csv('data.csv', index_col='year')
     names = df.columns
-    os.remove('data.csv')
     return df, names
 
 df, names = load_data('babynames_pcts_abrg.csv')
