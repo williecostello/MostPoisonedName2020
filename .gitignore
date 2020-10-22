@@ -1,5 +1,8 @@
 # Ignore data directory
 data/
 
+# Ignore downloaded data file
+data.csv
+
 # Ignore notebook checkpoints
 .ipynb_checkpoints
