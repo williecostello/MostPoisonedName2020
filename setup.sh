@@ -2,13 +2,14 @@
 mkdir -p data/raw_data
 mkdir -p data/proc_data
 
-echo 'Downloading data'
+echo 'Downloading data...'
 
 # Download & unzip data
 curl https://www.ssa.gov/oact/babynames/names.zip -o data/raw_data/data.zip
 unzip data/raw_data/data.zip -d data/raw_data/
 
 echo 'Data downloaded'
+echo 'Processing files...'
 
 # Rename data files to remove 'yob' at the start of each filename
 for file in data/raw_data/*.txt
@@ -27,3 +28,7 @@ done
 cat data/proc_data/*.csv > data/babynames.csv
 
 echo 'Files processed'
+echo 'Executing Python script...'
+
+# Run Python processing script
+python process_data.py
