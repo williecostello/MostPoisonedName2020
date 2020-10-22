@@ -1,20 +1,27 @@
 import streamlit as st
+import boto3
+import os
 import pandas as pd
 import plotly.express as px
 
 '''
 # Baby Name Popularity Explorer :baby: :telescope:
 
-An app to explore the popularity of baby names in the U.S. over time, from 1880 to 2020
+An app to explore the popularity of U.S. baby names over time, from 1880 to 2020
 '''
 
+# Initialize S3 client for loading data
+s3_client = boto3.client('s3')
+
 @st.cache(allow_output_mutation=True)
-def load_data(path):
-    df = pd.read_csv(path, index_col='year')
+def load_data(file_name):
+    s3_client.download_file('mostpoisonedname2020', file_name, 'data.csv')
+    df = pd.read_csv('data.csv', index_col='year')
     names = df.columns
+    os.remove('data.csv')
     return df, names
 
-df, names = load_data('data/babynamepcts_abrg.csv')
+df, names = load_data('babynames_pcts_abrg.csv')
 
 selected_names = st.multiselect('Type to select baby names to explore', names)
 
