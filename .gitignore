@@ -1,5 +1,6 @@
-# Ignore data directory
+# Ignore data & visualization directories
 data/
+viz/
 
 # Ignore downloaded data file
 data.csv
