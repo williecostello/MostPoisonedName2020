@@ -1,6 +1,6 @@
 # MostPoisonedName2020
 
-"Is Hilary still the most poisoned baby name in U.S. history?" In this repo's accompanying [blog post](https://medium.com/@williecostello/is-hilary-still-the-most-poisoned-baby-name-in-u-s-history-133b4a421304) I present a 2020 update of [Hilary Parker](https://twitter.com/hspter)'s classic 2013 blog post and statistical analysis ["Hilary: the most poisoned baby name in US history"](https://hilaryparker.com/2013/01/30/hilary-the-most-poisoned-baby-name-in-us-history/). The answer: No, though the new most poisoned name is probably not what you expect.
+"Is Hilary still the most poisoned baby name in U.S. history?" In this repo's accompanying [blog post](https://medium.com/@williecostello/is-hilary-still-the-most-poisoned-baby-name-in-u-s-history-133b4a421304) I present a 2020 update of [Hilary Parker](https://github.com/hilaryparker)'s classic 2013 blog post and statistical analysis ["Hilary: the most poisoned baby name in US history"](https://hilaryparker.com/2013/01/30/hilary-the-most-poisoned-baby-name-in-us-history/) ([Github repo](https://github.com/hilaryparker/names)). The answer: No, though the new most poisoned name is probably not what you expect.
 
 Repository contents:
 
