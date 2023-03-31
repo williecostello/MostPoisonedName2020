@@ -13,7 +13,7 @@ An app to explore the popularity of U.S. baby names over time, from 1880 to 2020
 # Initialize S3 client for loading data
 s3_client = boto3.client('s3')
 
-@st.cache(allow_output_mutation=True)
+@st.cache_data
 def load_data(file_name):
     if not os.path.exists('data.csv'):
         s3_client.download_file('mostpoisonedname2020', file_name, 'data.csv')
